@@ -6,21 +6,11 @@ const config = require('./config.json');
 const apikey = config.apikey;
 
 const app = express();
-app.listen(7777);
+app.listen(3000);
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-
-// const TraducaoClima = {
-//     "few clouds": "Poucas nuvens",
-//     "scattered clouds": "Nuvens dispersas",
-//     "overcast clouds": "Clima nublado",
-//     "broken clouds": "Nuvens fragmentadas",
-//     "light snow": "Pouca neve",
-//     "light intensity drizzle": "Chuvisco de intensidade leve",
-//     "light rain": "Chuva leve"
-// }
 
 const TraducaoClima = {
     "Thunderstorm": "Tempestade",
@@ -84,7 +74,7 @@ const TraducaoClima = {
     "scattered clouds": "Nuvens dispersas",
     "broken clouds": "Nuvens fragmentadas",
     "overcast clouds": "Nublado"
-  };
+};
 
 app.get('/climatempo/:cidade', async(req, res) => {
     const city = req.params.cidade;
