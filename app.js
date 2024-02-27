@@ -69,6 +69,7 @@ const TraducaoClima = {
     "squalls": "Rajadas",
     "tornado": "Tornado",
     "Clear": "Céu limpo",
+    "clear sky": "Céu limpo",
     "Clouds": "Nuvens",
     "few clouds": "Poucas nuvens",
     "scattered clouds": "Nuvens dispersas",
